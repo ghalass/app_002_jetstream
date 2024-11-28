@@ -12,7 +12,7 @@
             <form>
                 <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                     <div class="mb-4">
-                        <label for="description" class="block text-gray-700 text-sm font-bold mb-2">Descripción:</label>
+                        <label for="description" class="block text-gray-700 text-sm font-bold mb-2">Description:</label>
                         <input type="text"
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             id="description" wire:model="description">
@@ -22,7 +22,7 @@
                     </div>
 
                     <div class="mb-4">
-                        <label for="quantity" class="block text-gray-700 text-sm font-bold mb-2">quantity:</label>
+                        <label for="quantity" class="block text-gray-700 text-sm font-bold mb-2">Quantity:</label>
                         <input type="number"
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             id="quantity" wire:model="quantity" min="0">
@@ -46,7 +46,5 @@
                 </div>
             </form>
         </div>
-
-
     </div>
 </div>

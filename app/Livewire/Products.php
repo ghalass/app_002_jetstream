@@ -4,11 +4,19 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\Product;
-
+use Livewire\Attributes\Validate;
 
 class Products extends Component
 {
-    public $products, $description, $quantity, $product_id;
+    public $products;
+
+    #[Validate('required|min:3', as: 'Description')]
+    public $description;
+
+    #[Validate('required|integer|min:0', as: 'Quantity')]
+    public $quantity;
+
+    public $product_id;
     public $modal = false;
 
     public function render()
@@ -50,10 +58,7 @@ class Products extends Component
     }
     function save() // guardar
     {
-        $this->validate([
-            'description' => 'required',
-            'quantity' => 'required|integer|min:0'
-        ]);
+        $this->validate();
 
         Product::updateOrCreate(['id' => $this->product_id], [
             'description' => $this->description,
